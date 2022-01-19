@@ -392,12 +392,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
              InlineKeyboardButton('🛡 Join Group 🛡', url='t.me/MOVIESTALKIES23') 
         ]
         ]
+            reply_markup=InlineKeyboardMarkup(buttons)
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-           reply_markup=InlineKeyboardMarkup(buttons)
             )
 
     elif query.data == "pages":
