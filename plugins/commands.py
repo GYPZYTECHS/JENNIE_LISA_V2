@@ -112,7 +112,7 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
         buttons = [
         [
-             InlineKeyboardButton('🛡 Join Group 🛡', url='t.me/MOVIESTALKIES23') 
+             InlineKeyboardButton('🛡 Join Group 🛡', url='https://t.me/MOVIESTALKIES23') 
         ]
         ]
     await client.send_cached_media(
