@@ -127,7 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('This Movie Not Found In DataBase,Admins will Add it soon Bro🤠')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -391,7 +391,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption
+            caption=f_caption,
+           buttons = [
+        [
+             InlineKeyboardButton('🛡 Join Group 🛡', url='t.me/MOVIESTALKIES23') 
+        ]
+        ]
             )
 
     elif query.data == "pages":
