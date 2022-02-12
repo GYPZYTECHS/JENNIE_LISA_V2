@@ -1,4 +1,4 @@
-# ULTRA_EVO_SAMANTHA_V5
+# EVO_JENNIE_LISA
 Very Sempil Bot Auto Filter bot
 ##[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=welcome+To+🆄🅻🆃🆁🅰🅴🆅🅾+🆂🅰🅼🅰🅽🆃🅷🅰+🆅5!;created+by+🆂🅼🅿+🆃🅶!;A+simple+autofilter+Bot!;Auto+filter+with+double+button!;start+message+with+pic!;and+all+futures!)
 </p>
@@ -119,4 +119,4 @@ Contact Me On [Telegram](https://t.me/Pro_editor_tg)
 ## License
 Code released under [The GNU General Public License](LICENSE).
 ## credit 🤠
-https://t.me/PANDITHAN_SIR
+https://t.me/MALAYALI_DUDE
