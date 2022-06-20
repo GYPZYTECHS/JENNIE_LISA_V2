@@ -112,14 +112,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("༄𝑆𝑎𝑚𝑎𝑛𝑡ℎ𝑎☆𝐴𝑘𝑘𝑖𝑛𝑒𝑛𝑖࿐
-                                  Hello {message.from_user.mention},This  is not Your Message 🧐
-
-{query.from_user.mention} Only Can Use This🤷‍♂
-
-Request Your Own✍
-
-©️{message.chat.username}", show_alert=True)
+        return await query.answer("okDa", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
