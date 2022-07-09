@@ -127,7 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.reply_photo(photo="https://telegra.ph/file/21bcd2a0505846a60c4b1.jpg ",
+            k = await query.message.edit(photo="https://telegra.ph/file/21bcd2a0505846a60c4b1.jpg ",
         text=f'<b>✷Requested movie:{query} \n\n Not available Right Now  ✷Possible Causes : 🤔\n ۝Not released yet \n ۝Unwanted texts in Msgs \n ۝Asking theatre prints \n
 ۝Not in my Database</b>',
         reply_markup=InlineKeyboardMarkup(
