@@ -868,9 +868,14 @@ async def auto_filter(client, msg, spoll=False):
             await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+             fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+        fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
+    
+    await asyncio.sleep(240)
+    await fmsg.delete()
+    await msg.delete()
+                                         
     if spoll:
         await msg.message.delete()
         
