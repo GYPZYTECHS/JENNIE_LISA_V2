@@ -127,9 +127,19 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('Sorry File not Found. Please Check The spelling. If not Admins Will Add it soon as possible 🥺 ')
-            await asyncio.sleep(10)
-            await k.delete()
+            k = await query.message.reply_photo(photo="https://telegra.ph/file/21bcd2a0505846a60c4b1.jpg ",
+        text=f"<b>✷Requested movie:"{query} \n\n "Not available Right Now  ✷Possible Causes : 🤔\n ۝Not released yet \n ۝Unwanted texts in Msgs \n ۝Asking theatre prints \n
+۝Not in my Database</b>",
+        reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton('✍️ CHECK SPELLING🕵️‍♀️ ', url =f'https://www.google.com/search?q={query}')
+                        ],                       
+        parse_mode='html'
+        )
+    await asyncio.sleep(30)
+    await k.delete()
+    await msg.delete()
 
 
 @Client.on_callback_query()
