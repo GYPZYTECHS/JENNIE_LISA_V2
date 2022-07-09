@@ -133,7 +133,7 @@ async def advantage_spoll_choker(bot, query):
         reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton('✍️ CHECK SPELLING🕵️‍♀️ ', url =f'https://www.google.com/search?q={query}')
+                            InlineKeyboardButton('✍️ CHECK SPELLING🕵️‍♀️', url =f'https://www.google.com/search?q={query}')
                         ],                       
         parse_mode='html'
         )
