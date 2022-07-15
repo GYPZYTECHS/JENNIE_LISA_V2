@@ -920,7 +920,7 @@ async def advantage_spell_chok(msg):
     zz1 = await zz.edit("Did you mean any one of these?  🤓",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(10)
-   zz2 = await client.send_photo(
+    zz2 = await client.send_photo(
                     photo="https://telegra.ph/file/bcb364d0c94dfdc2527c6.jpg",
                     chat_id=message.chat.id,
                     caption=Presets.NO_MEDIA.format(query_message, updated_query),
