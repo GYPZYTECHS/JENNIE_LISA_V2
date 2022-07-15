@@ -966,7 +966,7 @@ async def manual_filters(client, message, text=False):
                                 reply_to_message_id = reply_id
                             )
                     elif btn == "[]":
-                        await client.send_cached_media(
+                         fmsg = await client.send_cached_media(
                             group_id,
                             fileid,
                             caption=reply_text or "",
