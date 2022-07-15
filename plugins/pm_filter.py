@@ -919,20 +919,9 @@ async def advantage_spell_chok(msg):
     zz1 = await zz.edit("Did you mean any one of these?  🤓",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(10)
-    zz2 = await zz.send_photo(
-                    photo="https://telegra.ph/file/bcb364d0c94dfdc2527c6.jpg",
-                    chat_id=message.chat.id,
-                    caption=Presets.NO_MEDIA.format(query_message, updated_query),
-                    reply_to_message_id=message.message_id,
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [InlineKeyboardButton(
-                                "ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ", url="https://www.google.com/search?q={query}")
-                             ]
-                        ])
-                )
+    zz2 = await zz1.edit('Check the spelling carefully before sending request ☺️')
     
-    await asyncio.sleep(8)
+    await asyncio.sleep(10)
     await zz2.delete()
     await msg.delete()
     
