@@ -130,7 +130,6 @@ async def advantage_spoll_choker(bot, query):
            k = await query.message.edit('Not available Right Now \n✷Possible Causes : 🤔\n\n ۝Not released yet\n ۝Unwanted texts in Msgs\n ۝Asking theatre prints \n ۝Not in my Database')
     await asyncio.sleep(30)
     await k.delete()
-    await msg.delete()
 
 
 @Client.on_callback_query()
