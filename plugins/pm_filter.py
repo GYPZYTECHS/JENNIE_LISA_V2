@@ -918,7 +918,7 @@ async def advantage_spell_chok(msg):
     await asyncio.sleep(3)
     zz1 = await zz.edit("Did you mean any one of these?  🤓",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(10)
+    await asyncio.sleep(15)
     zz2 = await zz1.edit('Check the spelling carefully before sending request ☺️')
     
     await asyncio.sleep(10)
