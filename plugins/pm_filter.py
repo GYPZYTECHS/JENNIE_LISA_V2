@@ -127,7 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-           k = await query.message.edit('This Movie Not Found In DataBase  😑 ')
+           k = await query.message.edit('Not available Right Now \n✷Possible Causes : 🤔\n\n ۝Not released yet\n ۝Unwanted texts in Msgs\n ۝Asking theatre prints \n ۝Not in my Database')
     await asyncio.sleep(30)
     await k.delete()
     await msg.delete()
@@ -862,7 +862,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         fmsg = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     
-    await asyncio.sleep(240)
+    await asyncio.sleep(60)
     await fmsg.delete()
     await msg.delete()
                                          
@@ -920,7 +920,7 @@ async def advantage_spell_chok(msg):
     zz1 = await zz.edit("Did you mean any one of these?  🤓",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(10)
-    zz2 = await client.send_photo(
+    zz2 = await zz.send_photo(
                     photo="https://telegra.ph/file/bcb364d0c94dfdc2527c6.jpg",
                     chat_id=message.chat.id,
                     caption=Presets.NO_MEDIA.format(query_message, updated_query),
