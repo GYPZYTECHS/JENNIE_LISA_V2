@@ -127,18 +127,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-           k=await client.send_photo(
-                    photo="https://telegra.ph/file/21bcd2a0505846a60c4b1.jpg",
-                    chat_id=message.chat.id,
-                    caption=Presets.NO_MEDIA.format(query_message, updated_query),
-                    reply_to_message_id=message.message_id,
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [InlineKeyboardButton(
-                                "ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ", url="https://www.google.com/search?q={query}")
-                             ]
-                        ])
-                )
+           k = await query.message.edit('This Movie Not Found In DataBase  😑 ')
     await asyncio.sleep(30)
     await k.delete()
     await msg.delete()
@@ -931,7 +920,18 @@ async def advantage_spell_chok(msg):
     zz1 = await zz.edit("Did you mean any one of these?  🤓",
                     reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(10)
-    zz2 = await zz1.edit('Not available Right Now \n✷Possible Causes : 🤔\n\n ۝Not released yet\n ۝Unwanted texts in Msgs\n ۝Asking theatre prints \n ۝Not in my Database')
+   zz2 = await client.send_photo(
+                    photo="https://telegra.ph/file/bcb364d0c94dfdc2527c6.jpg",
+                    chat_id=message.chat.id,
+                    caption=Presets.NO_MEDIA.format(query_message, updated_query),
+                    reply_to_message_id=message.message_id,
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                            [InlineKeyboardButton(
+                                "ᴄʜᴇᴄᴋ sᴘᴇʟʟɪɴɢ", url="https://www.google.com/search?q={query}")
+                             ]
+                        ])
+                )
     
     await asyncio.sleep(8)
     await zz2.delete()
