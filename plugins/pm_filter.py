@@ -958,7 +958,7 @@ async def manual_filters(client, message, text=False):
                           fmsg = await client.send_message(group_id, reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                          fmsg = await client.send_message(
+                           fmsg = await client.send_message(
                                 group_id, 
                                 reply_text,
                                 disable_web_page_preview=True,
@@ -974,7 +974,7 @@ async def manual_filters(client, message, text=False):
                         )
                     else:
                         button = eval(btn) 
-                      fmsg = await message.reply_cached_media(
+                       fmsg = await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
